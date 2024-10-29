@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Rubik+Glitch+Pop&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 3%;
+    background-color: #2d5e24;
+    background-image: url('https://www.institutoclaro.org.br/educacao/wp-content/uploads/sites/2/2022/09/caatinga-fundo-1-1-1.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+header h1 {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 4vw;
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#loginBtn {
+    all: unset;
+    background-color: transparent;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    padding: 0;
+
+}
+
+/* .ola {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 25%;
+    height: 27rem;
+    margin: auto;
+    margin-top: 4%;
+}
+
+
+.esquerda,
+.direita {
+    position: absolute;
+    font-size: 380px;
+    color: #000;
+    bottom: 4.5%;
+    
+}
+
+.esquerda {
+    left: -29%;
+}
+
+.direita {
+    right: -29%;
+}
+
+.esquerda2,
+.direita2 {
+    position: absolute;
+    font-size: 325px;
+    color: #000;
+    bottom: 10%;
+}
+.esquerda2{
+    left: -47%;
+}
+
+.direita2{
+    right: -47%;
+}
+
+
+
+/* TAMANHO DA TELA DO CARROSSEL */
+.container {
+    height: 65%;
+    width: 25%;
+    border-radius: 11px;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 5%;
+}
+
+/* POSICIONAMENTO DAS LABELS EM RELAÇÃO AO QUADRO CONTENT */
+.navigation {
+    position: absolute;
+    bottom: 20px;
+    left: 27%;
+    display: flex;
+}
+
+/* TAMANHO E ESTILIZAÇÃO DAS LABELS */
+.bar {
+    width: 20px;
+    height: 20px;
+    border: 2px solid white;
+    margin: 7px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.bar:hover {
+    background-color: white;
+}
+
+/* ESCONDER AS BOLINHAS DO INPUT:RADIO */
+input {
+    display: none;
+}
+
+/* TODAS IMAGES ESTÃO NA TELA, PORÉM N VISIVEIS */
+.slides {
+    display: flex;
+    width: 500%;
+    height: 100%;
+}
+
+/* tamanho de cada slide */
+.slide {
+    width: 20%;
+    transition: .6s;
+}
+
+/* tamanho de cada slide em relação ao pai(slide) */
+.slide img {
+    width: 100%;
+    height: 100%;
+}
+
+/* 
+MOVER AS IMAGENS NO CARROSSEL 
+QUANDO O SLIDE1 ESTIVER CHECADO A MARGEM DEVE SER ZERO, PARA PODER EXIBIR A IMAGEM 1 E ASSIM POR DIANTE
+*/
+#slides1:checked~.s1 {
+    margin-left: 0;
+}
+
+#slides2:checked~.s1 {
+    margin-left: -20%;
+}
+
+#slides3:checked~.s1 {
+    margin-left: -40%;
+}
+
+#slides4:checked~.s1 {
+    margin-left: -60%;
+}
+
+#slides5:checked~.s1 {
+    margin-left: -80%;
+}
