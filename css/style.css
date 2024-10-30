@@ -1,76 +1,141 @@
-<!DOCTYPE html>
-<html lang="en">
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Rubik+Glitch+Pop&display=swap');
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galeria</title>
-    <link rel="stylesheet" href="../css/style.css">
-</head>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-<body>
-    <header>
-        <div class="hamburger" onclick="toggleMenu()"><svg xmlns="http://www.w3.org/2000/svg" width="44" height="44"
-                fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
-                <path fill-rule="evenodd"
-                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
-            </svg></div>
-        <h1>GALERIA</h1>
-        <button id="loginBtn">
-            <svg xmlns="http://www.w3.org/2000/svg" width="43" height="43" fill="currentColor" class="bi bi-person-fill"
-                viewBox="0 0 16 16">
-                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
-            </svg>
-        </button>
-    </header>
-    <section>
-        <div class="qual">
-            <div class="slides">
-                <input type="radio" name="radio" id="slides1" checked />
-                <input type="radio" name="radio" id="slides2" />
-                <input type="radio" name="radio" id="slides3" />
-                <input type="radio" name="radio" id="slides4" />
-                <input type="radio" name="radio" id="slides5" />
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
 
-                <div class="slide s1">
-                    <img src="https://imagepng.org/wp-content/uploads/2017/10/quadrado-preto-2.png" alt="Guerreiro" />
-                </div>
-                <div class="slide">
-                    <img src="https://img.freepik.com/fotos-gratis/fundo-de-gotas-de-agua_23-2148098971.jpg" alt="" />
-                </div>
-                <div class="slide">
-                    <img src="https://imagepng.org/wp-content/uploads/2017/10/quadrado-preto-2.png" alt="" />
-                </div>
-                <div class="slide">
-                    <img src="https://img.freepik.com/fotos-gratis/fundo-de-gotas-de-agua_23-2148098971.jpg" alt="" />
-                </div>
-                <div class="slide">
-                    <img src="https://imagepng.org/wp-content/uploads/2017/10/quadrado-preto-2.png" alt="" />
-                </div>
-            </div>
-            <div class="navigation">
-                <label class="bar" for="slides1"></label>
-                <label class="bar" for="slides2"></label>
-                <label class="bar" for="slides3"></label>
-                <label class="bar" for="slides4"></label>
-                <label class="bar" for="slides5"></label>
-            </div>
-        </div>
 
-        </div>
-    </section>
-    <div class="organiza">
-        <div class="background"><img
-                src="https://static.todamateria.com.br/upload/fa/ch/facheiropilosocereuspachycladus-cke.jpg"
-                alt="cactos"> </div>
-        <div class="background"><img
-                src="https://turismodenatureza.com.br/wp-content/uploads/2023/11/curiosidades-sobre-a-caatinga.jpg">
-        </div>
-        <div class="background"> </div>
-        <div class="background"> </div>
-    </div>
+header {
+    display: flex;
+    align-items: center;
+    padding: 3%;
+    background-color: #2d5e24;
+    background-image: url('https://www.institutoclaro.org.br/educacao/wp-content/uploads/sites/2/2022/09/caatinga-fundo-1-1-1.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
 
-    <script src=".//"></script>
-</body>
+header h1 {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 4vw;
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
 
-</html>
+#loginBtn {
+    all: unset;
+    background-color: transparent;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    padding: 0;
+
+}
+
+
+.qual {
+    height: 65%;
+    width: 25%;
+    border-radius: 5px;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 6%;
+}
+
+.navigation {
+    position: absolute;
+    bottom: 20px;
+    left: 31%;
+    display: flex;
+}
+
+.bar {
+    width: 15px;
+    height: 15px;
+    border: 2px solid white;
+    margin: 7px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.bar:hover {
+    background-color: green;
+}
+
+
+input {
+    display: none;
+}
+
+.slides {
+    display: flex;
+    width: 500%;
+    height: 100%;
+}
+
+.slide {
+    width: 20%;
+    transition: .6s;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+}
+
+#slides1:checked~.s1 {
+    margin-left: 0;
+}
+
+#slides2:checked~.s1 {
+    margin-left: -20%;
+}
+
+#slides3:checked~.s1 {
+    margin-left: -40%;
+}
+
+#slides4:checked~.s1 {
+    margin-left: -60%;
+}
+
+#slides5:checked~.s1 {
+    margin-left: -80%;
+}
+
+section{
+    height: 550px;
+}
+
+.organiza{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+    margin: 3%;
+}
+.background{
+    width: 20rem;
+    height: 20rem;
+    border: 5px solid rgb(7, 140, 7);
+    background-color: blue;
+    overflow: hidden;
+    box-shadow: 10px 5px 5px rgb(131, 130, 130);
+}
+img{
+    width: 100%;
+    height: 100%;
+}
